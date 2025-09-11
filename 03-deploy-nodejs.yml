@@ -1,0 +1,5 @@
+- name: Node.js deployment playbook
+  hosts: app
+  become: yes
+  roles:
+    - nodejs

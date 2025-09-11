@@ -1,0 +1,5 @@
+- name: Nginx configuration playbook
+  hosts: proxy
+  become: yes
+  roles:
+    - nginx

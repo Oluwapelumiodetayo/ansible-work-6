@@ -1,0 +1,8 @@
+- name: System maintenance tasks
+  hosts: all
+  become: yes
+  tasks:
+    - name: Update packages
+      apt:
+        update_cache: yes
+        upgrade: dist

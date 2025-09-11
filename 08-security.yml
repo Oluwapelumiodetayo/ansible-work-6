@@ -1,0 +1,13 @@
+- name: Security hardening
+  hosts: all
+  become: yes
+  tasks:
+    - name: Ensure UFW is installed
+      apt:
+        name: ufw
+        state: present
+    - name: Allow SSH
+      ufw:
+        rule: allow
+        port: 22
+        proto: tcp

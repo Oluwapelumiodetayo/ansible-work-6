@@ -1,0 +1,8 @@
+- name: Basic monitoring setup
+  hosts: all
+  become: yes
+  tasks:
+    - name: Install htop
+      apt:
+        name: htop
+        state: present

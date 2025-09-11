@@ -1,0 +1,8 @@
+- name: Backup important files
+  hosts: all
+  become: yes
+  tasks:
+    - name: Archive /etc
+      archive:
+        path: /etc
+        dest: /tmp/etc-backup.tar.gz
