@@ -1,0 +1,8 @@
+- name: Deploy static HTML page
+  hosts: web
+  become: yes
+  tasks:
+    - name: Copy static.html to web root
+      copy:
+        src: static.html
+        dest: /var/www/html/index.html
